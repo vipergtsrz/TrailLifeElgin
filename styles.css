@@ -36,7 +36,7 @@ a:hover {
 /* Header styles */
 header {
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 0 0 2rem 0;
     background-color: var(--primary-color);
     color: white;
 }
@@ -50,10 +50,6 @@ header p {
     font-size: 1.2rem;
 }
 
-header img {
-    max-width: 200px;
-    margin-top: 1rem;
-}
 
 /* Navigation styles */
 nav {
@@ -97,6 +93,11 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+section p{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
 section h2 {
     color: var(--primary-color);
     margin-bottom: 1rem;
@@ -108,18 +109,18 @@ section h3 {
 }
 
 /* Program Overview section */
-#program article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
+hr{
+    margin: 10px 0;
 }
-
-#program article img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin-bottom: 1rem;
+div.image-text{
+    display:flex;gap:5px; 
+    align-items: center;
+}
+div.image-text div.image{
+    width: 200px;
+}
+div.image-text p {
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -136,6 +137,10 @@ section h3 {
 /* Lists */
 ul, ol {
     margin-left: 1.5rem;
+}
+
+section a{
+    text-decoration: underline;
 }
 
 li {
