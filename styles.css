@@ -1,0 +1,171 @@
+/* CSS Variables for easy theme management */
+:root {
+    --primary-color: #2c5d3f; /* Dark green for headers */
+    --secondary-color: #8fb996; /* Light green for backgrounds */
+    --accent-color: #d2b48c; /* Tan for accents */
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --font-family: 'Roboto', sans-serif;
+    --font-size-base: 16px;
+}
+
+/* Reset and global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header img {
+    max-width: 200px;
+    margin-top: 1rem;
+}
+
+/* Navigation styles */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* Main content sections */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+}
+
+/* Program Overview section */
+#program article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#program article img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    #program article {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #program article img {
+        margin-right: 2rem;
+    }
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
