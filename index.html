@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="images/logo.png" alt="Trail Life USA Logo" width="500">
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+    <header class="full">
+        <img src="images/logo.png" alt="Trail Life USA Logo">
         <h1>Troop IL-8758</h1>
         <p>Harvest Bible Chapel, Elgin IL</p>
     </header>
-    
+    <header class="mobile">
+        <img src="images/horizontal-logo.png" alt="Trail Life USA Logo">
+        <label for="menu-toggle"><img src="images/burger-menu.svg" alt="Menu"></label>
+    </header>
     <nav>
         <ul>
             <li><a href="#vision">Vision</a></li>
@@ -28,6 +32,7 @@
     <main>
         <section id="vision">
             <h2>Vision of Trail Life</h2>
+
             <p>More than ever, boys need a uniquely masculine program where their assertive, audacious, and adventurous nature is celebrated, not sequestered.</p>
             <h3>Let Boys Be Boys</h3>
             <p>Too many boys are turning to virtual worlds of television, video games, digital media, and the internet to find realms they can conquer and areas where they can excel. The result of this virtual conquest is often apathy, apparent rebellion, or outright resistance to real-world challenge.</p>
@@ -45,7 +50,7 @@
                     <img src="images/fox.jpeg" alt="fox patrol">
                 </div>
                     <div>
-                        <p><strong>Fox Patrol</strong> (5- & 6-year-olds - must be 5 years old by 10/31)</p>
+                        <p><strong>Fox Patrol</strong> (5 & 6-year-olds - must be 5 years old by 10/31)</p>
                         <p>We do require a parent to accompany their Fox TrailMan at all meetings & events.</p>
                     </div>
                 </div>
@@ -54,14 +59,14 @@
 
                         <img src="images/hawk.jpeg" alt="hawk patrol">
                     </div>
-                    <p><strong>Hawk Patrol</strong> (7- & 8-year-olds)</p>
+                    <p><strong>Hawk Patrol</strong> (7 & 8-year-olds)</p>
                 </div>
                 <div class="image-text">
                     <div class="image">
                         <img src="images/lion.jpeg" alt="mountain lion patrol">
 
                     </div>
-                    <p><strong>Mountain Lion Patrol</strong> (9- & 10-year-olds)</p>
+                    <p><strong>Mountain Lion Patrol</strong> (9 & 10-year-olds)</p>
                 </div>
                 
                 
@@ -180,9 +185,13 @@
             </ol>
         </section>
     </main>
-    
-    <footer>
-        <p>For more information, visit <a href="http://www.TrailLifeElgin.com">www.TrailLifeElgin.com</a></p>
-    </footer>
+    <script>
+        //hide the menu when a link is clicked on mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = (e) => menuToggle.checked = false;
+        const menuLinks = document.querySelectorAll('nav ul li a');
+        menuLinks.forEach(link => link.addEventListener('click', closeMenu))
+    </script>
+
 </body>
 </html>
