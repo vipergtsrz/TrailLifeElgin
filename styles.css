@@ -74,7 +74,7 @@ header p {
 /* Navigation styles */
 nav {
     position: sticky;
-    top: 0;
+    top: 45px;
     background-color: var(--secondary-color);
     padding: 1rem;
     z-index: 1000;
@@ -97,6 +97,27 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--primary-color);
+}
+
+a.contact{
+    background-color: var(--accent-color);
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    color: #111;
+    position: sticky;
+    top:0;
+    margin-bottom: -1px;
+}
+a.contact span{
+    color: var(--primary-color);
+}
+a.contact:hover{
+    text-decoration: none;
+}
+a.contact:hover span{
+    text-decoration: underline;
+
 }
 
 /* Main content sections */
@@ -224,7 +245,7 @@ label[for="menu-toggle"] img {
     }
     nav {
         display: none;
-        top: 99px;
+        top: 144px;
     }
     #menu-toggle:checked ~ nav {
         display: block;
@@ -247,6 +268,9 @@ label[for="menu-toggle"] img {
         background-color: #eee;
         text-align: center;
         cursor: pointer;
+    }
+    a.contact{
+        top:99px;
     }
 }
 @media (min-width: 769px) {
